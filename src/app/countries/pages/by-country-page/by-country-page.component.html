@@ -1,1 +1,10 @@
-<p>by-country-page works!</p>
+<shared-search-box
+cadenaDeTexto="Cadena de ejemplo"
+(onValue)="searchByCountry($event)"
+/>
+<div class="col">
+  <hr>
+  <countries-country-table [countries]="countries" />
+
+</div>
+

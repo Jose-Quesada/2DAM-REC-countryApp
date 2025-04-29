@@ -1,1 +1,9 @@
-<p>by-region-page works!</p>
+<shared-search-box
+cadenaDeTexto="Cadena de ejemplo"
+(onValue)="searchByRegion($event)"
+/>
+<div class="col">
+  <hr>
+  <countries-country-table [countries]="countries" />
+
+</div>
