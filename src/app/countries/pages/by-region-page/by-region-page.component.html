@@ -1,7 +1,15 @@
-<shared-search-box
-cadenaDeTexto="Cadena de ejemplo"
-(onValue)="searchByRegion($event)"
-/>
+<div class="row">
+  <div class="col text-center">
+    <!-- Search box -->
+    <button *ngFor="let region of regions"
+      class="btn mx-2"
+      [ngClass]=" { 'btn-outline-primary': selectedRegion === region } "
+      (click)="searchByRegion(region)">
+      {{ region }}
+    </button>
+  </div>
+</div>
+
 <div class="col">
   <hr>
   <countries-country-table [countries]="countries" />

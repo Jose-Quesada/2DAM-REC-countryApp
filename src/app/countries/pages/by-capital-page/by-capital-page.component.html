@@ -1,9 +1,10 @@
 <shared-search-box
 cadenaDeTexto="Cadena de ejemplo"
-(onValue)="searchByCapital($event)"
+(onDebounce)="searchByCapital($event)"
 />
 <div class="col">
   <hr>
+  <shared-loading-spinner *ngIf="isLoading"   />
   <countries-country-table [countries]="countries" />
 
 </div>

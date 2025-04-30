@@ -11,10 +11,7 @@ import { CountryService } from '../../services/country.service';
 export class ByCountryPageComponent {
 
   countries: Country[]= [];
-    constructor(  private countryService:CountryService
-
-    ){}
-
+    constructor(  private countryService:CountryService){}
 
     searchByCountry ( term : string ):void{
       this.countryService.searchCountry(term)
